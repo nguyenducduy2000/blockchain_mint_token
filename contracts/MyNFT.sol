@@ -5,10 +5,10 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract MyNFT is ERC721, Ownable {
+contract MyNFT is ERC721 {
     uint256 private tokenId;
 
-    constructor(string memory name, string memory symbol) ERC721(name, symbol) Ownable(msg.sender) {
+    constructor(string memory name, string memory symbol) ERC721(name, symbol) {
         tokenId = 0;
     }
 

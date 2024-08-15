@@ -105,7 +105,10 @@ export const Dapp = () => {
             );
             const mintTxn = await myTokenContract.mint(
                 selectedAddress,
-                ethers.utils.parseUnits("10000", 18)
+                ethers.utils.parseUnits("10000", 18),
+                {
+                    gasLimit: 5000000,
+                }
             );
             setTxnBeingSent(mintTxn.hash);
             await mintTxn.wait();
@@ -150,7 +153,9 @@ export const Dapp = () => {
             }
 
             // Deposit the tokens
-            const depositTxn = await depositContract.deposit(amountInWei);
+            const depositTxn = await depositContract.deposit(amountInWei, {
+                gasLimit: 5000000,
+            });
             setTxnBeingSent(depositTxn.hash);
             await depositTxn.wait();
 

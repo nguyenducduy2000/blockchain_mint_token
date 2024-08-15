@@ -27,6 +27,8 @@ module.exports = {
             url: process.env.BSC_TESTNET_URL,
             accounts: [`0x${process.env.PRIVATE_KEY}`],
             chainId: 97,
+            gas: 2100000,
+            gasPrice: 8000000000,
         },
         linearSepolia: {
             url: `https://linea-sepolia.infura.io/v3/${process.env.INFURA_KEY}`,

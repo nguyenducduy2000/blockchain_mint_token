@@ -5,13 +5,13 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "contracts/MyNFT.sol";
 
-contract DepositContract is Ownable {
+contract DepositContract {
     IERC20 public erc20Token;
     MyNFT public erc721Token;
     mapping(address => uint256) public deposits;
     mapping(address => uint256) public totalDeposits;
 
-    constructor(address _erc20Token, address _erc721Token) Ownable(msg.sender) {
+    constructor(address _erc20Token, address _erc721Token) {
         erc20Token = IERC20(_erc20Token);
         erc721Token = MyNFT(_erc721Token);
     }
