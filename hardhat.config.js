@@ -23,10 +23,11 @@ module.exports = {
         //     url: process.env.ETHERIUM_SEPOLIA_URL,
         //     accounts: [process.env.PRIVATE_KEY],
         // },
-        // bscTestnet: {
-        //     url: process.env.BSC_TESTNET_URL,
-        //     accounts: [process.env.PRIVATE_KEY],
-        // },
+        tBSC: {
+            url: process.env.BSC_TESTNET_URL,
+            accounts: [`0x${process.env.PRIVATE_KEY}`],
+            chainId: 97,
+        },
         linearSepolia: {
             url: `https://linea-sepolia.infura.io/v3/${process.env.INFURA_KEY}`,
             accounts: [`0x${process.env.PRIVATE_KEY}`],

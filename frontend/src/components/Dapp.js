@@ -45,9 +45,9 @@ export const Dapp = () => {
                 const network = await provider.getNetwork();
                 setNetWork(network);
 
-                if (network.chainId !== 59141) {
+                if (network.chainId !== 97) {
                     // Adjust this to the desired network ID
-                    setError("Please switch to the Sepolia network!");
+                    setError("Please switch to the BSC testnet network!");
                     return;
                 }
 
